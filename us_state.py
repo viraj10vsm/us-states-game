@@ -25,7 +25,9 @@ class UsStates:
         x_cor = int(self.data[self.data['state'] == answer_state].x)
         y_cor = int(self.data[self.data['state'] == answer_state].y)
         self.pointer.goto(x_cor,y_cor)
+        self.pointer.color("green")
         self.pointer.write(arg=answer_state, move=True, align="center", font=("Arial", 8, "normal"))
+        self.pointer.color("black")      
 
     def show_score(self):
         self.pointer.goto(0, 300)
